@@ -28,7 +28,7 @@ $sql = "SELECT id, firstname, lastname FROM MyGuest";
 $result = $conn->query($sql);
 // the above contains my auth data, and will
 
-f ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
